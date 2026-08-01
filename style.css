@@ -32,7 +32,7 @@ body {
       #522d80 32px 40px,
       #f56600 40px 48px
     );
-  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard, cursive;
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard;
 }
 
 button {
@@ -79,7 +79,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   filter: drop-shadow(4px 5px 0 #ffffff);
-  font: 1000 clamp(3.6rem, 13vw, 7.4rem)/.76 "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard, cursive;
+  font: 1000 clamp(3.6rem, 13vw, 7.4rem)/.76 "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard;
   letter-spacing: -.065em;
   transform: scaleY(1.14) skewY(-4deg);
 }
@@ -93,7 +93,7 @@ h1 {
   color: var(--purple-deep);
   background: var(--orange-bright);
   box-shadow: 5px 5px 0 var(--purple);
-  font: 1000 clamp(.78rem, 2.8vw, 1.18rem)/1.15 "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard, cursive;
+  font: 1000 clamp(.78rem, 2.8vw, 1.18rem)/1.15 "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard;
   text-shadow: 1px 1px 0 white;
   transform: rotate(-1deg);
 }
@@ -188,7 +188,7 @@ h1 {
   display: block;
   margin-top: 9px;
   color: var(--purple-deep);
-  font: 900 clamp(.7rem, 1.8vw, .88rem)/1.1 "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard, cursive;
+  font: 900 clamp(.7rem, 1.8vw, .88rem)/1.1 "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard;
   text-transform: uppercase;
 }
 
@@ -242,7 +242,7 @@ h1 {
   bottom: 38px;
   margin: 0;
   color: var(--orange-bright);
-  font: 900 clamp(.72rem, 2.5vw, 1.05rem)/1 "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard, cursive;
+  font: 900 clamp(.72rem, 2.5vw, 1.05rem)/1 "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard;
   text-decoration: underline;
   width: max-content;
   max-width: 100%;
