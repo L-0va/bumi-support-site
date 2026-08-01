@@ -1,0 +1,333 @@
+:root {
+  --orange: #f56600;
+  --orange-bright: #f56600;
+  --orange-deep: #b94700;
+  --purple: #522d80;
+  --purple-bright: #522d80;
+  --purple-deep: #2e1a47;
+  --cream: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--purple-deep);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--orange-bright);
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #f56600 0 8px,
+      #522d80 8px 16px,
+      #f56600 16px 24px,
+      #2e1a47 24px 32px,
+      #522d80 32px 40px,
+      #f56600 40px 48px
+    );
+  font-family: "Comic Sans MS", "Comic Sans", Chalkboard, cursive;
+}
+
+button {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible {
+  outline: 4px dashed var(--orange-bright);
+  outline-offset: 5px;
+}
+
+.home-page {
+  width: min(860px, calc(100% - 66px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 26px clamp(14px, 4vw, 38px) 20px;
+  border-right: 4px ridge #c0c0c0;
+  border-left: 4px ridge #c0c0c0;
+  background:
+    radial-gradient(circle, rgba(245,102,0,.28) 0 1px, transparent 1.5px) 0 0 / 38px 38px,
+    var(--purple-deep);
+  text-align: center;
+}
+
+.site-header {
+  width: min(100%, 720px);
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 8px 0 24px;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #f56600,
+    #f56600,
+    #522d80,
+    #2e1a47,
+    #f56600,
+    #522d80,
+    #f56600
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(4px 5px 0 #ffffff);
+  font: 1000 clamp(3.6rem, 13vw, 7.4rem)/.76 "Arial Black", Impact, sans-serif;
+  letter-spacing: -.065em;
+  transform: scaleY(1.14) skewY(-4deg);
+}
+
+.girlfriend-day {
+  width: max-content;
+  max-width: 100%;
+  margin: 30px auto 20px;
+  padding: 7px 13px;
+  border: 4px outset #f5f5f5;
+  color: var(--purple-deep);
+  background: var(--orange-bright);
+  box-shadow: 5px 5px 0 var(--purple);
+  font: 1000 clamp(.78rem, 2.8vw, 1.18rem)/1.15 "Comic Sans MS", Chalkboard, cursive;
+  text-shadow: 1px 1px 0 white;
+  transform: rotate(-1deg);
+}
+
+.flames {
+  width: min(400px, 92%);
+  height: 72px;
+  margin: 4px auto 10px;
+  background: url("./flames-static.png") repeat-x center bottom / 100px 72px;
+  image-rendering: pixelated;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flames {
+    background-image: url("./flames.gif");
+  }
+}
+
+.retro-divider {
+  width: min(520px, 92%);
+  height: 18px;
+  margin: 18px auto;
+  border: 4px ridge white;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--orange) 0 24px,
+    var(--purple) 24px 48px,
+    white 48px 54px,
+    var(--purple-deep) 54px 78px
+  );
+  box-shadow: 4px 4px 0 var(--orange-deep);
+}
+
+.bumi-zone {
+  position: relative;
+  min-height: 660px;
+  padding: 150px 6px 64px;
+  text-align: center;
+}
+
+.speech-bubble {
+  position: absolute;
+  z-index: 5;
+  top: 34px;
+  right: 50%;
+  width: min(56%, 430px);
+  min-height: 132px;
+  padding: 18px 20px;
+  display: grid;
+  place-items: center;
+  border: 5px solid white;
+  border-radius: 49% 44% 53% 42% / 44% 52% 43% 56%;
+  color: #111;
+  background: white;
+  box-shadow: 0 0 0 3px #111;
+  transform: translateX(50%) rotate(2deg);
+}
+
+.speech-bubble::before,
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  transform: rotate(24deg);
+}
+
+.speech-bubble::before {
+  z-index: -2;
+  bottom: -68px;
+  border-top: 70px solid #111;
+  border-right: 28px solid transparent;
+  border-left: 3px solid transparent;
+}
+
+.speech-bubble::after {
+  z-index: -1;
+  bottom: -55px;
+  margin-left: 5px;
+  border-top: 62px solid white;
+  border-right: 20px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.speech-bubble p {
+  margin: 0;
+  font-size: clamp(.95rem, 2.7vw, 1.35rem);
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.speech-bubble cite {
+  display: block;
+  margin-top: 9px;
+  color: var(--purple-deep);
+  font: 900 clamp(.7rem, 1.8vw, .88rem)/1.1 "Courier New", monospace;
+  text-transform: uppercase;
+}
+
+.speech-bubble.is-talking {
+  animation: bubble-jank-centered 320ms steps(3, end);
+}
+
+.bumi-button {
+  width: min(86%, 620px);
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.bumi-frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+  border: 4px solid var(--orange);
+  background: #111;
+  box-shadow: 8px 8px 0 var(--purple);
+  transform: rotate(-1deg);
+}
+
+.bumi-button.is-boinging .bumi-frame {
+  animation: bumi-boing 430ms steps(4, end);
+}
+
+.bumi-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  image-orientation: from-image;
+}
+
+.bumi-frame img.is-changing {
+  animation: photo-swap 360ms steps(4, end);
+}
+
+.click-note {
+  position: absolute;
+  z-index: 6;
+  right: 50%;
+  bottom: 38px;
+  margin: 0;
+  color: var(--orange-bright);
+  font: 900 clamp(.72rem, 2.5vw, 1.05rem)/1 "Courier New", monospace;
+  text-decoration: underline;
+  width: max-content;
+  max-width: 100%;
+  transform: translateX(50%);
+  animation: blinkish .95s steps(2, end) infinite;
+}
+
+@keyframes bumi-boing {
+  0%, 100% { transform: rotate(-1deg) translate(0, 0) scale(1); }
+  25% { transform: rotate(2deg) translate(5px, 11px) scale(1.05, .92); }
+  50% { transform: rotate(-3deg) translate(-3px, -15px) scale(.95, 1.07); }
+  75% { transform: rotate(1deg) translate(2px, 3px) scale(1.02, .98); }
+}
+
+@keyframes photo-swap {
+  0% { opacity: .15; filter: saturate(2) contrast(1.25); }
+  100% { opacity: 1; filter: none; }
+}
+
+@keyframes bubble-jank-centered {
+  0%, 100% { transform: translateX(50%) rotate(2deg) scale(1); }
+  33% { transform: translateX(50%) rotate(-2deg) scale(1.04); }
+  66% { transform: translateX(50%) rotate(4deg) scale(.98); }
+}
+
+@keyframes blinkish {
+  0%, 55% { visibility: visible; }
+  56%, 100% { visibility: hidden; }
+}
+
+@media (max-width: 650px) {
+  body {
+    background-size: 100% 40px;
+  }
+
+  .home-page {
+    width: calc(100% - 28px);
+    padding-inline: 10px;
+    border-width: 2px;
+  }
+
+  h1 {
+    font-size: clamp(3.4rem, 18vw, 5.1rem);
+  }
+
+  .girlfriend-day {
+    margin-top: 26px;
+    padding-inline: 8px;
+  }
+
+  .flames {
+    width: min(300px, 92%);
+  }
+
+  .bumi-zone {
+    min-height: 590px;
+    padding: 190px 0 58px;
+  }
+
+  .speech-bubble {
+    top: 26px;
+    right: 50%;
+    min-height: 145px;
+    width: min(91%, 370px);
+  }
+
+  .bumi-button {
+    width: min(96%, 490px);
+    margin: 0;
+  }
+
+  .bumi-frame {
+    box-shadow: 5px 6px 0 var(--purple);
+  }
+
+  .click-note {
+    bottom: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
