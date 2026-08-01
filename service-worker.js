@@ -1,8 +1,8 @@
-const CACHE_NAME = "bumi-support-v10";
+const CACHE_NAME = "bumi-support-v11";
 const APP_ASSETS = [
   "./",
   "./index.html",
-  "./style.css",
+  "./style.css?v=11",
   "./script.js",
   "./manifest.json",
   "./bumi-1.png",
